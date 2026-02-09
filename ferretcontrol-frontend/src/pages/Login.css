@@ -1,0 +1,239 @@
+.login-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* Left Side - Hero/Branding */
+.login-left {
+    flex: 1;
+    background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    position: relative;
+}
+
+.login-left::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.login-left::after {
+    content: '';
+    position: absolute;
+    bottom: -5%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.brand-icon {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.login-left h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+}
+
+.login-left p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 80%;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 2rem;
+    left: 3rem;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+}
+
+/* Right Side - Form */
+.login-right {
+    flex: 1;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Centered horizontally */
+    padding: 3rem;
+}
+
+.login-form-wrapper {
+    width: 100%;
+    max-width: 450px;
+    /* Limit width */
+}
+
+.brand-logo-mobile {
+    display: none;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.login-header {
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.login-subheader {
+    color: #666;
+    font-size: 1rem;
+}
+
+.login-subheader a {
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: none;
+    /* Placeholder style */
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    transition: border-color 0.3s;
+    outline: none;
+    background: transparent;
+}
+
+.form-input:focus {
+    border-bottom-color: #1a237e;
+}
+
+.form-input::placeholder {
+    color: #999;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    /* Rounded pill style */
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s;
+}
+
+.btn-google:hover {
+    background-color: #f9f9f9;
+}
+
+.forgot-password {
+    text-align: left;
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.forgot-password span {
+    color: #999;
+}
+
+.forgot-password a {
+    color: #1a237e;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.error-message {
+    color: #d32f2f;
+    background: #ffebee;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-left {
+        display: none;
+        /* Hide hero on small screens like typical login pages or keep as header */
+    }
+
+    .login-right {
+        padding: 2rem;
+    }
+
+    .brand-logo-mobile {
+        display: block;
+    }
+}

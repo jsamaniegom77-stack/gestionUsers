@@ -1,0 +1,126 @@
+.alerts-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    border: 1px solid #f0f0f0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.alerts-header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f0f0f0;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.alerts-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.alerts-title h2 {
+    font-size: 1.5rem;
+    color: #1a237e;
+    font-weight: 700;
+    margin: 0;
+}
+
+.alerts-title span {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+.alerts-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.alerts-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 24px 24px 0 24px;
+}
+
+.alerts-content {
+    padding: 24px;
+}
+
+/* Badges for Alerts */
+.alert-type-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.alert-critical {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.alert-warning {
+    background: #ffedd5;
+    color: #9a3412;
+    border: 1px solid #fed7aa;
+}
+
+.alert-info {
+    background: #e0f2fe;
+    color: #075985;
+    border: 1px solid #bae6fd;
+}
+
+.status-unread {
+    font-weight: 700;
+    color: #1a237e;
+    position: relative;
+    padding-left: 12px;
+}
+
+.status-unread::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: #2563eb;
+    border-radius: 50%;
+}
+
+.status-read {
+    color: #94a3b8;
+}
+
+.btn-mark-all {
+    background: white;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-mark-all:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
